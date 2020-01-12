@@ -5,7 +5,7 @@ $:.push File.expand_path('../lib', __FILE__)
 require 'line_notify/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'line-notify-ruby'
+  s.name        = 'line_notify'
   s.version     = LineNotify::VERSION
   s.authors     = ['Shojiro Yanagisawa']
   s.email       = ['nipe0324@gmail.com']
