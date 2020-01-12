@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module LineNotify
+module LineNotifyClient
   # ## LineNotify::Client
   # A class for LINE Notify API client.
   #
-  class Client
+  class HttpClient
     HOST = 'notify-api.line.me'
     ACCEPT = 'application/json'
     USER_AGENT = 'LineNotify Ruby'

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'line_notify'
+require 'line_notify_client'
 require 'webmock/rspec'
 
 WebMock.disable_net_connect!

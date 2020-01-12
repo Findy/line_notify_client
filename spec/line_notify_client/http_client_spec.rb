@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe LineNotify::Client do
+RSpec.describe LineNotifyClient::HttpClient do
   def stub_api_request
     stub_request(request_method, request_url)
       .with(body: request_body)
@@ -20,7 +20,7 @@ RSpec.describe LineNotify::Client do
   end
 
   describe '#notify' do
-    subject { LineNotify::Client.new('token').notify('test') }
+    subject { LineNotifyClient.new('token').notify('test') }
 
     before { stub_api_request }
 
@@ -50,7 +50,7 @@ RSpec.describe LineNotify::Client do
   end
 
   describe '#status' do
-    subject { LineNotify::Client.new('token').status }
+    subject { LineNotifyClient.new('token').status }
 
     before { stub_api_request }
 
@@ -80,7 +80,7 @@ RSpec.describe LineNotify::Client do
   end
 
   describe '#revoke' do
-    subject { LineNotify::Client.new('token').revoke }
+    subject { LineNotifyClient.new('token').revoke }
 
     before { stub_api_request }
 
@@ -110,7 +110,7 @@ RSpec.describe LineNotify::Client do
   end
 
   describe 'when raised faraday error' do
-    subject { LineNotify::Client.new('token').revoke }
+    subject { LineNotifyClient.new('token').revoke }
 
     before { allow(Faraday).to receive_message_chain(:new, :send).and_raise(error_class) }
 

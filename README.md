@@ -1,23 +1,30 @@
-# line-notify-ruby
+# line_notify_client
 
 LINE Notify API client library, written in Ruby https://notify-bot.line.me/doc/en/
 
 ## Install
 
 ```bash
-gem install line-notify-ruby
+gem install line_notify_client
+```
+
+or
+
+```
+# Gemfile
+gem 'line_notify_client'
 ```
 
 ## Library
 
 ```ruby
-require 'line_notify'
+require 'line_notify_client'
 
 # OAuth2 Auhentication Documentation: https://notify-bot.line.me/doc/en/
 access_token = 'access token from LINE Notify oauth2 authentication'
 
 # new client
-client = LineNotify::Client.new(access_token)
+client = LineNotifyClient.new(access_token)
 
 # Sends notifications to users or groups are related to an access token.
 client.notify('message')
