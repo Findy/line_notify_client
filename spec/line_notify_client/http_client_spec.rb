@@ -122,8 +122,8 @@ RSpec.describe LineNotifyClient::HttpClient do
       end
     end
 
-    context 'when raise Faraday::Error::TimeoutError' do
-      let(:error_class) { Faraday::Error::TimeoutError }
+    context 'when raise Faraday::TimeoutError' do
+      let(:error_class) { Faraday::TimeoutError }
 
       it 'should raise LineNotify::TimeoutError' do
         expect { subject }.to raise_error(LineNotify::TimeoutError)
