@@ -52,7 +52,7 @@ module LineNotifyClient
     def request(http_method, path, params, headers)
       faraday_response = connection.send(http_method, path, params, headers)
       LineNotify::Response.new(faraday_response)
-    rescue Faraday::Error::TimeoutError => e
+    rescue Faraday::TimeoutError => e
       raise LineNotify::TimeoutError, e.message
     rescue Faraday::Error => e
       raise LineNotify::Error, e.message
