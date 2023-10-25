@@ -19,10 +19,9 @@ Gem::Specification.new do |s|
   end
   s.require_paths = ["lib"]
 
-  s.add_dependency 'faraday', '>= 1.0.0'
-  s.add_dependency 'faraday_middleware', '>= 1.0.0'
+  s.add_dependency 'faraday', '>= 2', '< 3'
 
-  s.add_development_dependency 'rake', '>= 10.0'
-  s.add_development_dependency 'rspec', '>= 3.0'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rspec', '~> 3'
   s.add_development_dependency 'webmock'
 end
